@@ -130,6 +130,7 @@ const Register = () => {
                             <input type="checkbox" class="check-button" />
                             <label class="pat-reg-check">I accept the terms and conditions</label>
                         </div> */}
+                        
 
                         <div class="pat-reg-input-name">
                             <input type="submit" class="pat-reg-button" value="Register" onClick={submitForm}/>
