@@ -26,26 +26,34 @@ const ShowPatients = () => {
     //     }
     // ]
     const [arr,setarr] = useState([]);
-
-    useEffect(()=>{
-        axios.post('admin/appoinments',{
-            data:{
-                date:17,
-                month:4,
-                year:2023
-            }
-        })
+    const [date, setDate] = useState(null);
+    
+    const handleDateChange = (e) => {
+        setDate(e.target.value);
+        console.log(e.target.value);
+    }
+    const getAppointment=()=>{
+        const axiosConfig = {
+            params: {
+                       date
+            }      
+          }
+        axios.get('admin/appoinments',
+            axiosConfig
+        )
         .then((resp)=>{
             console.log(resp);
             setarr(resp.data);
         })
-    },[])
+    }
 
 
     return (
         <div className="all-apts">
             <div className="all-apts-heading">
                 <h2>Todays Appointments are</h2>
+                <input type="date" name="" id="" onChange={handleDateChange} />
+                <button type="submit" className='mt-5' onClick={getAppointment}>Check Appointment</button>
             </div>
             <div className="row row-cols-1 g-4 g-sm-3">
                 {

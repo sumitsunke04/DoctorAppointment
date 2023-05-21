@@ -1,7 +1,7 @@
 
 import Modal from "./Modal";
 const ShowDoctorCard = ({ doctorId, name, speciality, location }) => {
-    console.log(doctorId)
+    // console.log(doctorId)
 
     return (
         <>

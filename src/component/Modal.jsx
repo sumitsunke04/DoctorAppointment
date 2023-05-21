@@ -4,26 +4,29 @@ import axios from 'axios';
 import { param } from 'jquery';
 
 const Modal = ({doctorId}) => {
-
+    // console.log(doctorId,"/////")
     const [date, setDate] = useState(null);
     const [appointmentTime, setAppointmentTime] = useState("")
     const handleDateChange = (e) => {
         setDate(e.target.value);
-        console.log(e.target.value);
+        // console.log(e.target.value);
     }
 
-    console.log(`user/bookapp/?doctorId=${doctorId}`)
+    // console.log(`user/bookapp/?doctorId=${doctorId}`)
 
     const bookAppointment = (e) =>{
-        const obj = {
-            "doctorId":doctorId
-        }
+        console.log(doctorId);
+        const axiosConfig = {
+            params: {
+                       doctorId,
+                       date
+            }     
+          }
+        
 
-      axios.get(`user/bookapp`,{
-            params:{
-                doctorId
-            }
-        }).then((res)=>{
+      axios.get(`user/bookapp`,
+            axiosConfig
+        ).then((res)=>{
             
          
             
@@ -40,7 +43,8 @@ const Modal = ({doctorId}) => {
                     }
                     
                 },{ params:{
-                    doctorId
+                    doctorId,
+                    date
                 }})
                 .then((resp)=>{
                     console.log(resp);

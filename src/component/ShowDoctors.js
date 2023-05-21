@@ -40,7 +40,7 @@ const ShowDoctors = () => {
                             doctors.map((i) => {
                                 return (
                                     <div className="col">
-                                        <ShowDoctorCard key={i.id} doctorId = {i._id} name={i.name} speciality={i.Specialist} location={i.email} />
+                                        <ShowDoctorCard key={i._id} doctorId = {i._id} name={i.name} speciality={i.Specialist} location={i.email} />
                                     </div>)
                             })
                         }
