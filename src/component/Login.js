@@ -1,5 +1,6 @@
 // import './Login.css';
 import { useState } from "react"
+import axios from "axios";
 
 const Login = () => {
     const [email,setEmail] = useState("");
@@ -12,7 +13,7 @@ const Login = () => {
         setPassword(e.target.value);
     }
 
-    
+    const url = "http://127.0.0.1:8080/user/login"
     const LoginUser = (e)=>{
         e.preventDefault();
         const loginObj = {
@@ -20,6 +21,8 @@ const Login = () => {
             "password":password
         }
         console.log(loginObj);
+
+        axios.post('/user/login/', loginObj).then((response)=>(console.log(response)))
     }
     return ( 
         <div class="bodyy">
@@ -40,6 +43,10 @@ const Login = () => {
 
                     <div class="input-name">
                         <input type="submit" class="button" value="Login" onClick={LoginUser}/>
+                    </div>
+
+                    <div className="dont-have-account">
+                        <a href="/Register" class ="dont-have-accnt-anchor">Don't Have an Account ?</a>
                     </div>
                 </form>
             </div>

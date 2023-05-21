@@ -21,8 +21,8 @@
     /* margin: 56px auto 0; */
     border-radius: 20px;
     position:absolute;
-    left: 145px;
-    bottom: 20px;
+    left: 125px;
+    bottom: 125px;
     margin-top:500px;
     /* right: 190px; */
   }
@@ -48,7 +48,7 @@
   }
   
   .pat-reg-name {
-    width: 45%;
+    width: 100%;
     padding: 8px 0 8px 40px;
   }
   

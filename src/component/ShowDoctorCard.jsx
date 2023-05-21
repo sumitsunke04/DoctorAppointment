@@ -1,5 +1,7 @@
+
 import Modal from "./Modal";
-const ShowDoctorCard = ({ id, name, speciality, location }) => {
+const ShowDoctorCard = ({ doctorId, name, speciality, location }) => {
+    console.log(doctorId)
 
     return (
         <>
@@ -20,7 +22,7 @@ const ShowDoctorCard = ({ id, name, speciality, location }) => {
                         <div className="col text-end text-sm-center">
                             <div className="btn btn-primary subscribe" data-toggle="modal" data-target="#exampleModal">Book</div>
                             <div>
-                                <Modal/>
+                                <Modal doctorId = {doctorId}/>
                             </div>
                         </div>
                     </div>

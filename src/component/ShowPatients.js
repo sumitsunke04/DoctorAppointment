@@ -1,28 +1,47 @@
+import { useEffect, useState } from "react";
 import ShowPatientCard from "./ShowPatientCard.js";
+import axios from "axios";
 const ShowPatients = () => {
-    const arr = [
-        {
-            id: 1,
-            name: "sumit",
-            age: 20,
-            Gender: "male",
-            location: "kolhapur"
-        },
-        {
-            id: 2,
-            name: "maheshwar",
-            age: 20,
-            Gender: "male",
-            location: "sangli"
-        },
-        {
-            id: 3,
-            name: "hrishi",
-            age: 30,
-            Gender: "male",
-            location: "satara"
-        }
-    ]
+    // const arr = [
+    //     {
+    //         id: 1,
+    //         name: "sumit",
+    //         age: 20,
+    //         Gender: "male",
+    //         location: "kolhapur"
+    //     },
+    //     {
+    //         id: 2,
+    //         name: "maheshwar",
+    //         age: 20,
+    //         Gender: "male",
+    //         location: "sangli"
+    //     },
+    //     {
+    //         id: 3,
+    //         name: "hrishi",
+    //         age: 30,
+    //         Gender: "male",
+    //         location: "satara"
+    //     }
+    // ]
+    const [arr,setarr] = useState([]);
+
+    useEffect(()=>{
+        axios.post('admin/appoinments',{
+            data:{
+                date:17,
+                month:4,
+                year:2023
+            }
+        })
+        .then((resp)=>{
+            console.log(resp);
+            setarr(resp.data);
+        })
+    },[])
+
+
     return (
         <div className="all-apts">
             <div className="all-apts-heading">
@@ -35,7 +54,7 @@ const ShowPatients = () => {
                             arr.map((i) => {
                                 return (
                                     <div className="col">
-                                        <ShowPatientCard key={i.id} name={i.name} age={i.age} location={i.location} gender={i.Gender} />
+                                        <ShowPatientCard key={i._id} name={i.name} age={10} location={"pune"} gender={"male"} />
                                     </div>)
                             })
                         }

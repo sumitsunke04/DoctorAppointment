@@ -1,24 +1,28 @@
 import axios from "axios";
+import { useEffect } from "react";
 
-const handleSubmit = (e) =>{
-    axios.post("URL here",objectHere)
+
+//................................................Axios Instance Creation...................................
+const axiosInstance = axios.create({
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+});
+
+
+
+
+//.....................................................Fetch Function................................
+useEffect(()=>{
+    axios.get('https://jsonplaceholder.typicode.com/todos/1')
     .then((response)=>{
         console.log(response);
     })
     .catch((err)=>{
         console.log(err);
     })
-}
-
-const handleGet = (e) =>{
-    axios.get("URL here")
-    .then((response)=>{
-        console,log(response);
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
-}
+},[])
 
 
 // axios.interceptors.request.use((request)=>{

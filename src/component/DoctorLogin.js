@@ -1,4 +1,5 @@
 import { useState } from "react"
+import axios from "axios";
 
 const DoctorLogin = () => {
     const [email,setEmail] = useState("");
@@ -17,6 +18,8 @@ const DoctorLogin = () => {
             "email":email,
             "password":password
         }
+
+        axios.post('/admin/login/', loginObj).then((response)=>(console.log(response)))
         console.log(loginObj);
     }
     return ( 
@@ -39,6 +42,11 @@ const DoctorLogin = () => {
                     <div class="input-name">
                         <input type="submit" class="button" value="Login" onClick={LoginDoct}/>
                     </div>
+
+                    <div className="dont-have-account-doc">
+                        <a href="/DoctorRegster" class ="dont-have-accnt-anchor-doc">Don't Have an Account ?</a>
+                    </div>
+
                 </form>
             </div>
         </div>

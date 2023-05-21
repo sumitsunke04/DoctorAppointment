@@ -24,8 +24,9 @@ function App() {
         <Route exact path = "/login" element = {<Login/>}/>
         <Route exact path = "/Register" element = {<Register/>}/>
         <Route exact path = "/about" element={<ShowPatients/>}/>
-        <Route exact path = "/contact" element={<DoctorRegister/>}/>
         <Route exact path = "/findDoctor" element={<ShowDoctors/>}/>
+        <Route exact path = "/DoctorLogin" element={<DoctorLogin/>}/>
+        <Route exact path = "/DoctorRegster" element={<DoctorRegister/>}/>
       </Routes>
       {/* <Footer/> */}
     </BrowserRouter>

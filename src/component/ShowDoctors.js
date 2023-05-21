@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import ShowDoctorCard from "./ShowDoctorCard";
+import axios from "axios";
 const ShowDoctors = () => {
     const arr = [
         {
@@ -10,7 +12,7 @@ const ShowDoctors = () => {
         {
             id: 2,
             name: "samarth",
-            speciality: "useless",
+            speciality: "789",
             location: "kolhapur"
         },
         {
@@ -21,7 +23,11 @@ const ShowDoctors = () => {
         }
     ]
 
-    
+    const [doctors, setDoctors] = useState([]);
+    const url = "http://127.0.0.1:8080/user/doctors";
+    useEffect(()=>{
+        axios.get(url).then((response)=>((response.data))).then((data)=>(setDoctors(data)))
+    },[])
     return (
         <div className="avail-doctors">
             <div className="avail-doctors-heading">
@@ -31,10 +37,10 @@ const ShowDoctors = () => {
                 {
                     <>
                         {
-                            arr.map((i) => {
+                            doctors.map((i) => {
                                 return (
                                     <div className="col">
-                                        <ShowDoctorCard key={i.id} name={i.name} speciality={i.speciality} location={i.location} />
+                                        <ShowDoctorCard key={i.id} doctorId = {i._id} name={i.name} speciality={i.Specialist} location={i.email} />
                                     </div>)
                             })
                         }
