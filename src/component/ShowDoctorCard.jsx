@@ -2,7 +2,7 @@
 import Modal from "./Modal";
 const ShowDoctorCard = ({ doctorId, name, speciality, location }) => {
     // console.log(doctorId)
-
+    
     return (
         <>
             <div className="card shadow" >
@@ -19,6 +19,7 @@ const ShowDoctorCard = ({ doctorId, name, speciality, location }) => {
                         <div className="col text-start text-sm-center">
                             <p className="card-text">{location}</p>
                         </div>
+                        
                         <div className="col text-end text-sm-center">
                             <div className="btn btn-primary subscribe" data-toggle="modal" data-target="#exampleModal">Book</div>
                             <div>
