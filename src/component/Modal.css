@@ -2,3 +2,8 @@
     width: 100%;
     height: 100%;
   }
+
+ .modal-body h4{
+  font-family: 'Signika Negative';
+  text-align: center;
+ }

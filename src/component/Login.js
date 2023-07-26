@@ -1,8 +1,10 @@
 // import './Login.css';
-import { useState } from "react"
+import { useState} from "react"
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
+    const navigate=useNavigate();
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
@@ -22,7 +24,14 @@ const Login = () => {
         }
         console.log(loginObj);
 
-        axios.post('/user/login/', loginObj).then((response)=>(console.log(response)))
+        axios.post('/user/login/', loginObj).then((response)=>{
+            if(response.status == 200){
+                navigate("/findDoctor");
+            }
+            localStorage.setItem('isLogin', true);
+        })
+
+        
     }
     return ( 
         <div class="bodyy">

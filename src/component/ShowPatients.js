@@ -1,30 +1,9 @@
 import { useEffect, useState } from "react";
 import ShowPatientCard from "./ShowPatientCard.js";
 import axios from "axios";
+import './ShowPatients.css'
 const ShowPatients = () => {
-    // const arr = [
-    //     {
-    //         id: 1,
-    //         name: "sumit",
-    //         age: 20,
-    //         Gender: "male",
-    //         location: "kolhapur"
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "maheshwar",
-    //         age: 20,
-    //         Gender: "male",
-    //         location: "sangli"
-    //     },
-    //     {
-    //         id: 3,
-    //         name: "hrishi",
-    //         age: 30,
-    //         Gender: "male",
-    //         location: "satara"
-    //     }
-    // ]
+    
     const [arr,setarr] = useState([]);
     const [date, setDate] = useState(null);
     
@@ -42,27 +21,29 @@ const ShowPatients = () => {
             axiosConfig
         )
         .then((resp)=>{
-            console.log(resp);
+            console.log(resp.data);
             setarr(resp.data);
         })
+        
     }
 
 
     return (
-        <div className="all-apts">
+        <div className="all-apts "style={{marginTop:"20vh"}}>
             <div className="all-apts-heading">
-                <h2>Todays Appointments are</h2>
+                <h2>Check Appointments </h2>
                 <input type="date" name="" id="" onChange={handleDateChange} />
-                <button type="submit" className='mt-5' onClick={getAppointment}>Check Appointment</button>
+                <br /><br />
+                <button type="submit" className='btn btn-primary subscribe' onClick={getAppointment}>Check Appointment</button>
             </div>
-            <div className="row row-cols-1 g-4 g-sm-3">
+            <div className="row row-cols-1 g-4 g-sm-3 mt-4">
                 {
                     <>
                         {
                             arr.map((i) => {
                                 return (
-                                    <div className="col">
-                                        <ShowPatientCard key={i._id} name={i.name} age={10} location={"pune"} gender={"male"} />
+                                    <div className="col px-5">
+                                        <ShowPatientCard key={i._id} Symptoms={i.Symptoms}userId={i.userName} location={"pune"} hour={i.time.hour} min={i.time.min}/>
                                     </div>)
                             })
                         }

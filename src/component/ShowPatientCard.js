@@ -1,18 +1,18 @@
-const ShowPatientCard = ({ id, name, age, location, gender }) => {
+const ShowPatientCard = ({ id, Symptoms, userId, location, hour,min }) => {
     return (
-        <div className="card shadow" >
+        <div className="card shadow" style={{height:"70px"}}>
             <div
-                className="card-body p-2 px-3"
+                className="card-body p-2 px-3 mt-2"
             >
                 <div className="row row-cols-2 row-cols-sm-4 g-4 align-items-center">
                     <div className="col text-start text-sm-center">
-                        <p className="card-text" style={{ fontWeight: "bold" }}>{name}</p>
+                        <p className="card-text" style={{ fontWeight: "bold" }}>{Symptoms}</p>
                     </div>
                     <div className="col text-end text-sm-center">
-                        <p className="card-text">{age}</p>
+                        <p className="card-text">{userId}</p>
                     </div>
                     <div className="col text-start text-sm-center">
-                        <p className="card-text">{gender}</p>
+                        <p className="card-text">{hour}:{min}</p>
                     </div>
                     <div className="col text-end text-sm-center">
                         <p className="card-text">{location}</p>

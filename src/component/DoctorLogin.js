@@ -1,9 +1,11 @@
 import { useState } from "react"
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const DoctorLogin = () => {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
+    const navigate=useNavigate()
 
     const handleEmailChange=(e)=>{
         setEmail(e.target.value);
@@ -19,8 +21,13 @@ const DoctorLogin = () => {
             "password":password
         }
 
-        axios.post('/admin/login/', loginObj).then((response)=>(console.log(response)))
+        axios.post('/admin/login/', loginObj).then((response)=>{
+            if(response.status == 200){
+                navigate("/appointments");
+            }
+        })
         console.log(loginObj);
+
     }
     return ( 
         <div class="bodyy">

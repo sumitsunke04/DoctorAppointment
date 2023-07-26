@@ -1,96 +1,56 @@
-/* Pavan Home Page Css */
-
-/* Styles for the header */
-/* header {
-  background-color: #2e3192;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
-
-header img {
-  height: 50px;
-  margin-right: 10px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: normal;
-} */
-
-/* Styles for the navigation menu */
-/* nav {
-  background-color: #e2e2e2;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-nav a {
-  display: block;
-  padding: 10px;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  background-color: #ccc;
-} */
-
-/* CSS for header */
-/* .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f5f5f5;
-}
-
-.header .logo {
-  font-size: 25px;
-  font-family: 'Sriracha', cursive;
-  color: #000;
-  text-decoration: none;
-  margin-left: 30px;
-}
-
-.nav-items {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #f5f5f5;
-  margin-right: 20px;
-}
-
-.nav-items a {
-  text-decoration: none;
-  color: #000;
-  padding: 35px 20px;
-} */
-
-/* ------------------------------------------------------------------- */
 
 
 
-
-
-/* Styles for the entire page */
+/* /////////////////////////////////////////////////////////////////////////////////////// */
 /* body {
   margin: 0;
   font-family: Arial, sans-serif;
 } */
 
-
-/* Styles for the "Why Choose Us" cards */
-.card {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+.hp-navbar {
+  background-color: rgb(124 124 137);
+  border-radius: 4px;
 }
+
+.hp-navbar {
+  /* overflow: auto; */
+      overflow: auto;
+    height: 43px;
+    padding-bottom: 5px;
+    padding-top: 16px;
+    width: 60%;
+    padding-left: 5px;
+    padding-right: 13px;
+}
+
+.hp-navbar li {
+  float: left;
+  list-style: none;
+  margin-bottom: 13px;
+  margin-right: 20px;
+  margin: 8px;
+
+}
+
+.hp-navbar li a {
+  padding-top: 3px;
+  padding-bottom: 8px;
+  text-decoration: none;
+
+  color: rgb(244, 245, 247);
+  margin-right:10px ;
+  margin-left: 1px;
+
+}
+
+header {
+  /* background-color: #4b566e; */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #24262b;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 body {
@@ -98,37 +58,88 @@ body {
   box-sizing: border-box;
 }
 
+
 /* CSS for main section */
-.intro {
+.hp-intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 520px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://previews.123rf.com/images/chagin/chagin1809/chagin180900009/107646733-young-female-doctor-on-modern-clinic-background-horizontal-image-for-website-design.jpg");
-  background-size: cover;
+  
+  /* background: url("https://previews.123rf.com/images/chagin/chagin1809/chagin180900009/107646733-young-female-doctor-on-modern-clinic-background-horizontal-image-for-website-design.jpg"); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://img.freepik.com/free-photo/flat-lay-health-still-life-arrangement-with-copy-space_23-2148854064.jpg?w=1380&t=st=1684738939~exp=1684739539~hmac=4df413212459f4e196eb392b8e51dc92125b903a5f4364afcb697c59548d2317");
+  height:600px;  
+  background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.intro h1 {
+.hp-intro h1 {
   font-family: sans-serif;
   font-size: 60px;
-  color: #fff;
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
 }
 
-.intro p {
+.hp-intro p {
   font-size: 20px;
-  color: #d1d1d1;
+  color: white;
   text-transform: uppercase;
   margin: 20px 0;
+  /* margin-left: 160px; */
 }
 
-.intro button {
+
+/* .hp-intro {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hp-intro h1,p {
+  width: 52%;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: 'Lato', sans-serif;
+  font-size: 3em;
+}
+@keyframes typing {
+  from {
+    width: 0
+  }
+}    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+} */
+.hp-text{
+  font-size:5em;
+  letter-spacing: 10px;
+  border-right:5px solid;
+  width:100%;
+  white-space:nowrap;
+  overflow: hidden;
+  animation: 
+      typing 6s steps(53),
+      cursor .4s step-end infinite alternate;
+
+    
+}
+@keyframes cursor{
+  50%{border-color:transparent}
+}
+@keyframes typing{
+  from{width: 0}
+}
+
+.hp-intro button {
   background-color: #5edaf0;
   color: #000;
   padding: 10px 25px;
@@ -140,14 +151,14 @@ body {
   box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
 }
 
-.achievements {
+.hp-achievements {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 40px 80px;
 }
 
-.achievements .work {
+.hp-achievements .hp-work {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,7 +166,7 @@ body {
   padding: 0 40px;
 }
 
-.achievements .work i {
+.hp-achievements .hp-work i {
   width: fit-content;
   font-size: 50px;
   color: #333333;
@@ -164,184 +175,349 @@ body {
   padding: 12px;
 }
 
-.achievements .work .work-heading {
+.hp-achievements .hp-work .hp-work-heading {
   font-size: 20px;
   color: #333333;
   text-transform: uppercase;
   margin: 10px 0;
 }
 
-.achievements .work .work-text {
+.hp-achievements .hp-work .hp-work-text {
   font-size: 15px;
   color: #585858;
   margin: 10px 0;
 }
 
-.about-me {
+
+.hp-why {
+  font-family: 'Lato', sans-serif;
+  margin-top: 60px;
+  font-size: 1rem;
+}
+
+/*Card Styles*/
+
+.hp-card {
+  border: 1px solid #ccc;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 450px;
+  transition: all 0.6s;
+  background-color: #78faf84e;
+
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  padding: 40px 80px;
-  border-top: 2px solid #eeeeee;
-}
-
-.about-me img {
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.about-me-text h2 {
-  font-size: 30px;
-  color: #333333;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.about-me-text p {
-  font-size: 15px;
-  color: #585858;
-  margin: 10px 0;
-}
-
-
-
-
-
-/* Styles for the "Special Features" and "Our Services" sections */
-h2 {
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-/* Styles for the address */
-.address {
-  background-color: #2e3192;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-} */
-
-/* Card */
- .card {
-    background-color: hsl(0, 0%, 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 25rem;
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.card,
-.card-image {
-    border-radius: 1.3rem;
-} 
-
-/* Card image */
- .card-image {
-    max-width: 100%;
-    aspect-ratio: 1 / 1;
-}
-
-/* Card text */
-.text-wrapper {
-    margin: 1rem;
-}
-
-.card-title {
-    color: hsl(218, 44%, 22%);
-    font-size: 2rem;
-}
-
-.card-text {
-    font-size: 1.3rem;
-    color: hsl(220, 15%, 55%)
-}
-.Profile-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-.Contact-Button{
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-
-
-
-/* CSS for footer */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #302f49;
-  padding: 40px 80px;
-}
-
-.footer .copy {
-  color: #fff;
-}
-
-.bottom-links {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px 0;
-}
-
-.bottom-links .links {
-  display: flex;
+  text-align: justify;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 40px;
+  max-width: 25rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 
-.bottom-links .links span {
-  font-size: 20px;
-  color: #fff;
-  text-transform: uppercase;
-  margin: 10px 0;
+.hp-card:hover {
+  transform: scale(1.05);
 }
 
-.bottom-links .links a {
+.hp-card,
+.hp-card-image {
+  border-radius: 0.4rem;
+}
+
+
+.hp-card-image {
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+
+.hp-text-wrapper {
+  margin: 1rem;
+}
+
+.hp-card-title {
+  color: hsl(215, 89%, 4%);
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+.hp-card-text {
+  font-size: 1.3rem;
+  font-family: 'Lato', sans-serif;
+  color: rgb(56, 56, 56);
+  text-align: justify
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*Footer Styles*/
+.hp-f-container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.hp-f-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.hp-footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.hp-footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.hp-footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+  margin-left:30px;
+}
+
+.hp-footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.hp-footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.hp-footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
   text-decoration: none;
-  color: #a1a1a1;
-  padding: 10px 20px;
-}
-.card h3 {
-  margin-top: 0;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
 }
 
-.whychoose{
-    text-align: center;
-    margin-top: 15px;
-    font-size: 40px;
+.hp-footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.hp-footer-col .hp-social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.hp-footer-col .hp-social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.hp-copy {
+  margin-top: 50px;
+  margin-left: 100px;
+  color: white;
+  display: flex;
+    justify-content: center;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+  .hp-footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 574px) {
+  .hp-footer-col {
+    width: 100%;
+  }
+}
+
+.carousel-item  img {
+  height:80vh
+}
+
+
+
+/* Dhaplela CSS */
+.about .icon-boxes h4 {
+  font-size: 18px;
+  color: #4b7dab;
+  margin-bottom: 15px;
+}
+
+.about .icon-boxes h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c4964;
+  margin-bottom: 15px;
+}
+
+.about .icon-box {
+  margin-top: 40px;
+}
+
+.about .icon-box .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #8dc2f1;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.about .icon-box .icon i {
+  color: #1977cc;
+  font-size: 32px;
+}
+
+.about .icon-box:hover .icon {
+  background: #1977cc;
+  border-color: #1977cc;
+}
+
+.about .icon-box:hover .icon i {
+  color: #fff;
+}
+
+.about .icon-box .title {
+  margin-left: 85px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.about .icon-box .title a {
+  color: #343a40;
+  transition: 0.3s;
+  
+}
+
+.about .icon-box .title a:hover {
+  color: #1977cc;
+}
+
+.about .icon-box .description {
+  margin-left: 85px;
+  line-height: 24px;
+  font-size: 15px;
+  font-family: sans-serif;
+
+}
+
+.about .video-box {
+  background: url("../about.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.about .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#1977cc 50%, rgba(25, 119, 204, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+  overflow: hidden;
+}
+
+.about .play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.about .play-btn::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+  animation: pulsate-btn 2s;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(25, 119, 204, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+.about .play-btn:hover::after {
+  border-left: 15px solid #1977cc;
+  transform: scale(20);
+}
+
+.about .play-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  animation: none;
+  border-radius: 0;
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
 }
